@@ -6,6 +6,7 @@ public class FamousQuotes {
     public static void main(String[] args) {
         Scanner input = new Scanner(System.in);
         String reply = "yes";
+        String randomQuote = "yes";
         while (reply.equalsIgnoreCase("yes"))
             try {
                 String[] quotes = {
@@ -27,6 +28,11 @@ public class FamousQuotes {
 
                 System.out.println("Would you like to see another quote: Yes or No");
                  reply = input.nextLine();
+
+            int randomQuotes = (int) (Math.random() * 10) + 1;
+                System.out.println("Would you like to see a ramdom Quote? Yes or No");
+                randomQuote = input.nextLine();
+                System.out.println(quotes[randomQuotes]);
 
 
             } catch (Exception e) {
